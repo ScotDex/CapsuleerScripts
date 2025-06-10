@@ -1,8 +1,16 @@
+
+# This script automates the pressing of the 'V' key every 10 seconds in a Windows environment.
+# Ensure the script is run with appropriate permissions
+# and that the target application is in focus.
+
+# Note: THIS SCRIPT IS FOR EDUCATIONAL PURPOSES ONLY.
+# USING THIS WILL GET YOU BANNED FROM EVE ONLINE.
+
 # Load the required assembly
 Add-Type -AssemblyName System.Windows.Forms
 
 # Function to simulate key press
-function Press-Key {
+function Send-Key {
     param (
         [Parameter(Mandatory = $true)]
         [System.Windows.Forms.Keys]$key
@@ -29,7 +37,7 @@ function Press-Key {
 
 # Example of pressing the 'V' key every 10 seconds
 while ($true) {
-    Press-Key -key ([System.Windows.Forms.Keys]::V)
+    Send-Key -key ([System.Windows.Forms.Keys]::V)
     Start-Sleep -Seconds 10
 }
 
