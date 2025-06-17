@@ -137,3 +137,17 @@ dist
 
 .vscode/
 .vscode-test/
+
+# Ignore compiled output
+*.ps1xml
+*.psd1
+*.psm1
+
+# Ignore token/cache/output files if you save them
+token.json
+*.log
+*.cache
+
+# Ignore local environment files
+.env
+.env.local
