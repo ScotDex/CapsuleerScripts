@@ -1,12 +1,8 @@
-
 # Idea is to shorten and ease the process of generating a Tripwire recon note from D-Scan results in EVE Online.
 # Usage: Copy D-Scan results to clipboard, run this script, and it will generate a formatted recon note.
 # Paste to tripwire - job done.
 # Note - Beta Script - to be expanded/set to production 2025 - @ScottishDex/Dexomus Viliana - @MacGuinessWDS/Ryan Ruby
 # Do not use in production without testing and validation (And CCP will find out and slice off things)
-
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
 
 Add-Type -AssemblyName PresentationCore # Core module - (discovered through jabbing at AI)
 

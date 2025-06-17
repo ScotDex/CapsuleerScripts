@@ -1,11 +1,10 @@
 $uri = "https://esi.evetech.net/latest/status/"
 try {
-    $resp = Invoke-RestMethod -Uri $uri -Headers @{ "User-Agent" = "MyEsiApp (email@example.com)" } -TimeoutSec 10
-    Write-Host "🎮 EVE Server is ONLINE"
-    Write-Host "Players: $($resp.players)"
-    Write-Host "Server Version: $($resp.server_version)"
-    Write-Host "VIP-mode: $($resp.vip)"
+    $resp = Invoke-RestMethod -Uri $uri  -Method Get -ErrorAction Stop
+    Write-Host "EVE Online Server Status: Online"
+    write-host "Players - $($resp.players)"
+    write-host "Start Time - $($resp.start_time)"
 }
 catch {
-    Write-Host "⚠️ Could not reach EVE ESI endpoint:" $_.Exception.Message -ForegroundColor Red
-}
+    Write-Host "Failed to retrieve server status: $($_.Exception.Message)"
+}   
